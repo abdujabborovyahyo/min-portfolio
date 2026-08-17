@@ -1,0 +1,351 @@
+/* --- TERMINAL USLUBIDAGI SOZLAMALAR --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --text-color: #c5c6c7; /* Asosiy kulrang matn */
+    --bg-color: #0b0c10; /* Chuqur qora fon */
+    --card-bg: #1f2833; /* Kartochkalar uchun biroz yorug'roq qora */
+    --border-color: #45a29e; /* Chegara rangi (yashil-kulrang tus) */
+    --accent-color: #00ff41; /* Matrix yashil rangi */
+    --text-dim: #66fcf1; /* Qo'shimcha och yashil (havolalar uchun) */
+}
+
+body {
+    font-family: 'Fira Code', 'Inter', monospace; /* Terminal shrifti */
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section {
+    padding: 60px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 30px;
+    font-weight: 700;
+    color: var(--text-color);
+    border-left: 3px solid var(--accent-color);
+    padding-left: 10px;
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: opacity 0.2s;
+}
+
+a:hover {
+    opacity: 0.8;
+}
+
+/* --- HERO QISM --- */
+.hero {
+    padding: 80px 0 60px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.hero-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    border: 2px solid var(--accent-color);
+}
+
+.hero-text h1 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 20px;
+    color: var(--accent-color);
+}
+
+blockquote {
+    font-style: italic;
+    color: var(--text-dim);
+    margin-bottom: 25px;
+    border-left: 3px solid var(--border-color);
+    padding-left: 15px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: var(--accent-color);
+    text-decoration: none;
+    border: 1px solid var(--accent-color);
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.btn:hover {
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+    opacity: 1;
+}
+
+/* --- HAQIMDA --- */
+.about-text {
+    font-size: 16px;
+    max-width: 800px;
+}
+
+/* --- TEXNOLOGIYALAR --- */
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+.tech-category h3 {
+    font-size: 13px;
+    text-transform: uppercase;
+    color: var(--accent-color);
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.tech-category ul {
+    list-style: none;
+}
+
+.tech-category li {
+    margin-bottom: 6px;
+    font-size: 15px;
+}
+
+/* --- ASOSIY KO'NIKMALAR --- */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.skill-item h3 {
+    color: var(--text-dim);
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.skill-item p {
+    font-size: 14px;
+    color: var(--text-color);
+}
+
+/* --- LOYIHALAR --- */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    border: 1px solid var(--border-color);
+    padding: 20px;
+    border-radius: 4px; /* Terminalda burchaklar o'tkir bo'ladi, lekin biroz yumshatdik */
+    background-color: var(--card-bg);
+    cursor: pointer;
+    transition: border-color 0.2s;
+}
+
+.project-card:hover {
+    border-color: var(--accent-color);
+}
+
+.project-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.project-card p {
+    font-size: 14px;
+    color: var(--text-color);
+    margin-bottom: 15px;
+}
+
+.tech-tags {
+    display: flex;
+    gap: 10px;
+}
+
+.tech-tags span {
+    font-size: 12px;
+    background: var(--bg-color);
+    color: var(--accent-color);
+    padding: 4px 8px;
+    border: 1px solid var(--border-color);
+    font-family: inherit;
+}
+
+/* --- BLOGLAR --- */
+.blogs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.blog-card {
+    border: 1px solid var(--border-color);
+    padding: 20px;
+    background-color: var(--card-bg);
+}
+
+.blog-card h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    line-height: 1.4;
+    color: #ffffff;
+}
+
+.blog-card p {
+    font-size: 14px;
+    color: var(--text-color);
+    margin-bottom: 15px;
+}
+
+.blog-card a {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--accent-color);
+}
+
+/* --- BOG'LANISH --- */
+.contact {
+    text-align: center;
+    border-bottom: none;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.contact-links a {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-color);
+    border-bottom: 2px solid transparent;
+}
+
+.contact-links a:hover {
+    border-bottom-color: var(--accent-color);
+    color: var(--accent-color);
+    opacity: 1;
+}
+
+/* --- LOYIHA MODAL OYNASI --- */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    overflow-y: auto;
+    padding: 40px 20px;
+}
+
+.modal-box {
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: var(--bg-color);
+    border: 1px solid var(--accent-color);
+    padding: 30px;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: var(--accent-color);
+    font-size: 30px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.close-btn:hover {
+    color: #ffffff;
+}
+
+.modal-img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid var(--border-color);
+    margin-bottom: 20px;
+}
+
+.modal-box h3 {
+    color: var(--accent-color);
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.modal-box p {
+    font-size: 15px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.modal-links {
+    display: flex;
+    gap: 20px;
+}
+
+.modal-links a {
+    padding: 8px 16px;
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
+    font-family: inherit;
+}
+
+.modal-links a:hover {
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+    opacity: 1;
+}
+
+/* --- MOBIL QURILMALAR UCHUN --- */
+@media (max-width: 600px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        font-size: 18px;
+    }
+
+    blockquote {
+        border-left: none;
+        padding-left: 0;
+        text-align: center;
+    }
+}
